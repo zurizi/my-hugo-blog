@@ -1,0 +1,26 @@
+#dark-mode-toggle{
+  cursor: pointer;
+}
+html[data-theme="dark"] strong{
+  color:#f3f6f9;
+}
+
+html[data-theme="dark"] body{
+  background-color: #000A27;
+  color:#f3f6f9;
+}
+html[data-theme="dark"] .title, 
+html[data-theme="dark"] .site.name {
+  color:#f3f6f9;
+}
+html[data-theme="dark"] .article.markdown-body h1, html[data-theme="dark"] .article.markdown-body h2{
+  color:#f3f6f9
+}
+html[data-theme="dark"] .note.list .item:hover{
+    background-color: rgba(255,255,255,.1);
+    transform: scale(1.009);
+    box-shadow: 0 2px 6px 0 #3c435e, 
+    inset -1px 0 0 0 rgba(60, 67, 94,.3), 
+    inset 0 -1px 0 0 #3c435e, 
+    inset 1px 0 0 0 rgba(60, 67, 94,.2);
+}

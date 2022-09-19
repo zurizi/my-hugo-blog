@@ -1,0 +1,22 @@
+{{- $paginator := . -}}
+
+{{- if gt $paginator.TotalPages 0 -}}
+{{- $dateFormat := site.Params.dateFormat -}}
+{{- if not $dateFormat -}}{{- $dateFormat = "2006-01-02" -}}{{- end -}}
+<ul class="note list">
+    {{- range $paginator.Pages -}}
+      {{- $relURL := replace .RelPermalink "#" "%23" -}}
+      {{- $relURL = replace $relURL "." "%2e" -}}
+    <li class="item">
+        <a class="note" href="{{- $relURL -}}">
+            <p class="note title">{{- .Title | safeHTML -}}</p>
+            <span class="reading-time">{{ T "readingTime" .ReadingTime }}</span>
+            {{- if .Date -}}
+                <p class="note date">{{- .Date.Format $dateFormat -}}</p>
+            {{- end -}}
+        </a>
+        <!-- {{- partial "note-labels.html" . -}} -->
+    </li>
+    {{- end -}}
+</ul>
+{{- end -}}

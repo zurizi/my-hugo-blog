@@ -1,0 +1,68 @@
+baseURL = "https://example.com"
+
+title = "gajelas.hehe"
+
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+
+# Enable Disqus
+#disqusShortname = "XXX"
+
+# Google Analytics
+#googleAnalytics = "UA-123-45"
+
+
+
+
+[permalinks]
+posts = "/:title/"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = "02 Jan 2006"  # if unset, default is "2006-01-02"
+logo = ""  # if you have a logo png
+slogan = "ga jelas 🙃"
+license = ""  # CC License
+fullRss = true # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+readingTime = true
+
+
+[params.comments]
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.share]
+enable = false
+addThisId = ""
+inlineToolId = ""
+
+[params.assets]
+css = ["css/new-style.css"]
+js = ["js/script.js"]
+
+[params.nav]
+showCategories = false       # /categories/
+showTags = false             # /tags/
+
+# custom navigation items
+
+[[params.nav.custom]]
+title = "posts"
+url = "/posts"
+
+[[params.nav.custom]]
+title = "contact"
+url = "/contact"
+
+
